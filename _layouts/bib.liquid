@@ -34,7 +34,7 @@
             include figure.liquid
             loading="eager"
             path=entry_path
-            sizes = "200px"
+            sizes = "300px"
             class="preview z-depth-1 rounded"
             zoomable=true
             avoid_scaling=true
@@ -62,11 +62,103 @@
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+
+        {% comment %}
+          DEBUG: print author and scholar name info for troubleshooting matching logic.
+          (This will appear in the rendered HTML page — remove after debugging.)
+        {% endcomment %}
+
+        {% comment %}
+        <div style="color:red; font-size:small;">
+           DEBUG →
+           author.first = “[{{ author.first }}]”,
+           author.last = “[{{ author.last }}]”,
+           normalized_author_first = “[{{ author.first | replace: '~', ' ' | strip }}]”,
+           site.scholar.first_name = “[{{ site.scholar.first_name | join: ', ' }}]”,
+           site.scholar.last_name = “[{{ site.scholar.last_name }}]”
+        </div>
+        <div style="color:green; font-size:small;">
+              MATCH? → {{ scholar_firsts_joined contains normalized_author_first }}
+        </div>
+        {% endcomment %}
+
+        {% comment %}
+        {% assign normalized_author_first = author.first | remove: '.' | remove: '~' | strip | downcase %}
+        {% assign normalized_self_first = site.scholar.first_name | remove: '.' | remove: '~' | strip | downcase %}
+
+        {% assign author_initial = normalized_author_first | slice: 0, 1 %}
+        {% assign self_initial = normalized_self_first | slice: 0, 1 %}
+
+        {% if site.scholar.last_name contains author_last_name %}
+           {% if normalized_self_first == normalized_author_first or self_initial == author_initial %}
+              {% assign author_is_self = true %}
+           {% endif %}
+        {% endif %}
+        <!-- End splice -->
+        {% endcomment %}
+
+        {% comment %}
+        {% assign normalized_author_first = author.first | replace: '~', ' ' | strip %}
+        {% assign normalized_self_firsts = site.scholar.first_name | join: ',' | replace: '~', ' ' %}
+
+        {% if site.scholar.last_name contains author_last_name %}
+          {% if normalized_self_firsts contains normalized_author_first %}
+            {% assign author_is_self = true %}
+          {% endif %}
+        {% endif %}
+        {% endcomment %}
+
+        {% comment %}
+          <!-- This subtle issue was identified and is explained below by ChatGPT  -->
+          AUTHOR NAME NORMALIZATION
+          --------------------------
+          Purpose:
+            Ensures that authors in .bib entries are matched correctly
+            against the name defined in site.scholar.first_name / last_name.
+
+          Context:
+            Some .bib entries use LaTeX tildes (~) for non-breaking spaces
+            in initials (e.g., "J.~M."). When parsed by Jekyll Scholar,
+            these tildes are often converted into Unicode non-breaking
+            spaces (U+00A0) rather than regular ASCII spaces.
+
+          Why this code looks strange:
+            Liquid's string filters can't distinguish these invisible
+            characters directly, so we explicitly replace both:
+              1. Replace '~'  → normal space (U+0020)
+              2. Replace NBSP (U+00A0) → normal space (U+0020)
+            The NBSP character is the *invisible one* inside the first
+            argument of the second `replace:` call — do not delete or
+            retype it as a normal space.
+
+          In short:
+            This block normalizes "J.~M.", "J. M." (NBSP), and "J. M."
+            so they all match entries like "J. M." in site.scholar.first_name.
+        {% endcomment %}
+
+        {% assign normalized_author_first = author.first
+           | replace: '~', ' '  # (1) replace literal tilde (~) with a *normal* space
+           | replace: ' ', ' '  # (2) replace any *non-breaking space* (U+00A0) with a normal space
+           | strip %}
+        {% assign scholar_firsts_joined = site.scholar.first_name
+           | join: ','
+           | replace: '~', ' '  # (3) replace tildes with a *normal* space
+           | replace: ' ', ' '  # (4) replace *non-breaking spaces* (U+00A0) with a normal space
+           | strip %}
+
+        {% if site.scholar.last_name contains author_last_name %}
+          {% if scholar_firsts_joined contains normalized_author_first %}
+            {% assign author_is_self = true %}
+          {% endif %}
+        {% endif %}
+
+        {% comment %}
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
+        {% endcomment %}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}

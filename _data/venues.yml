@@ -7,3 +7,15 @@
 
 "Vision":
   color: "#009f36"
+
+"MNRAS":
+  url: https://academic.oup.com/mnras
+  color: "#937CB9"
+
+"A&A":
+  url: https://www.aanda.org/
+  color: "#31B5C1"
+
+"ApJ":
+  url: https://iopscience.iop.org/journal/0004-637X 
+  color: "#3C5492"
