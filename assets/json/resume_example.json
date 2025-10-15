@@ -1,11 +1,19 @@
 {
   "basics": {
-    "name": "John Mark Mehlhaff",
-    "label": "Astrophysicist",
+    "name": "Albert Einstein",
+    "label": "Scientist",
     "image": "",
-    "email": "mehlhaff@wustl.edu",
-    "phone": "+1 (206) 962-9335",
-    "url": "https://mehlhaffj.github.io/",
+    "email": "albert@einstein.de",
+    "phone": "(912) 123-4567",
+    "url": "https://alshedivat.github.io/al-folio/",
+    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
     "profiles": [
       {
         "network": "Twitter",
@@ -14,62 +22,15 @@
       }
     ]
   },
-  "interests": [
-    {
-      "name": "Black-hole astrophysics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
   "work": [
     {
-      "name": "Washington University in St. Louis",
-      "position": "SCEECS Postdoctoral Fellow",
-      "startDate": "2025",
-      "endDate": "now",
-      "summary": "Member of the SCEECS (Simons Collaboration on Extreme Electrodynamics of Compact Objects) and the Yajie Yuan and Alexander Chen research group."
-    },
-    {
-      "name": "Univ. Grenoble Alpes, CNRS, IPAG",
-      "position": "Postdoctoral Researcher",
-      "startDate": "2021",
-      "endDate": "2025",
-      "summary": "Member of the group of Benoît Cerutti."
-    },
-    {
-      "name": "University of Colorado, Boulder",
-      "position": "Ph.D. Student",
-      "startDate": "2017",
-      "endDate": "2021",
-      "summary": "Advised by Dmitri Uzdensky. Co-advised by Gregory Werner and Mitchell Begelman."
-    },
-    {
-      "name": "University of Washington, Seattle",
-      "position": "Undergraduate Research Assistant",
-      "startDate": "2014",
-      "endDate": "2015",
-      "summary": "Advised by George Bertsch."
-    },
-    {
-      "name": "Jet Propulsion Laboratory",
-      "position": "Summer Internship",
-      "startDate": "2014",
-      "endDate": "2014",
-      "summary": "Worked under Andrew Romero-Wolf. Worked on the Jet Propulsion Laboratory's catalog of quasars, which is used as a celestial map to enable precise spacecraft navigation. Wrote software to automatize the processing of VLBI data to update the catalog, ensuring coordinates of quasars remain precise and up-to-date."
-    },
-    {
-      "name": "University of Washington, Seattle",
-      "position": "Undergraduate Research Assistant",
-      "startDate": "2011",
-      "endDate": "2013",
-      "summary": "Worked under Eric Agol and Andrew Becker. Wrote software to detect new exoplanets from Kepler Space Telescope data."
+      "name": "Institute for Advanced Study, Princeton University",
+      "position": "Professor of Theoretical Physics",
+      "url": "https://example.com",
+      "startDate": "1933-01-01",
+      "endDate": "1955-01-01",
+      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "highlights": ["Relativity"]
     }
   ],
   "volunteer": [
@@ -190,14 +151,28 @@
   ],
   "languages": [
     {
-      "language": "English",
+      "language": "German",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
-      "language": "French",
-      "fluency": "Estimated CEFR level C1",
+      "language": "English",
+      "fluency": "Fluent",
       "icon": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "Physics",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Quantum Mechanics",
+        "Quantum Computing",
+        "Quantum Information",
+        "Quantum Cryptography",
+        "Quantum Communication",
+        "Quantum Teleportation"
+      ]
     }
   ],
   "references": [
