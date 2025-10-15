@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: black hole jets 
+description: their energy dissipation, composition, and appearance 
+img: assets/img/cygnusa.jpg
 importance: 2
-category: work
-giscus_comments: true
+category: theme
+giscus_comments: false
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,43 +1,13 @@
 ---
 layout: page
-title: research themes
+title: projects
 permalink: /projects/
 description: A growing collection of your cool projects.
-nav: true
+nav: false
 nav_order: 3
-display_categories: [theme]
+display_categories: [work, fun]
 horizontal: false
 ---
-
-# At a glance
-
-<div class="row align-items-center">
-    <div class="col-7">
-        <p>When black holes actively feed, they sometimes launch highly collimated, powerful, and rapidly propagating plasma jets into their environments. One famous example of such a jet is the one from the radio galaxy Cygnus A, pictured here.
-        <br>
-        <br>
-        The power source for the jet, very likely the supermassive black hole at the center of the galaxy, is far too small to appear in the image.</p>
-
-    </div>
-    <div class="col">
-        {% include figure.liquid loading="eager" path="assets/img/cygnusa.png" title="example image" class="img-fluid rounded z-depth-1" %}
-        <div class="caption">
-            Composite image of Cygnus A with X-ray light (NASA/CXC/SAO) colored blue, optical light (NASA/STScI) colored yellow, and radio (NSF/NRAO/AUI/VLA) colored red.
-        </div>
-    </div>
-</div>
-<div class="row">
-
-If we were to draw a jetted black hole with several of the main key features that these objects are thought to contain, we might come up with a diagram like the following:
-<div class="row">
-    <div class="col">
-        {% include figure.liquid loading="eager" path="assets/img/jet_schematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
 
 <!-- pages/projects.md -->
 <div class="projects">
