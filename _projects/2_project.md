@@ -9,18 +9,77 @@ giscus_comments: false
 ---
 
 <h2>
-Two outstanding mysteries about black hole jets
+Two of many unsolved mysteries surrounding black hole jets
 </h2>
 <ol>
-<li>How do they shine?</li>
-<li>What are they made of?</li>
+<li>How they shine</li>
+<li>What they are made of</li>
 </ol>
 
 <h2>
 How I think about these questions
 </h2>
-Let me elaborate my theoretical [jet diagram](https://www.markdownguide.org)jet diagram 
 
+<div class="row align-items-center">
+    <div class="col-6">
+        <p>
+            The light we observe from black hole jets comes from a chain of processes that might be diagrammed as in this sketch.
+        <br>
+        <br>
+            First the jet is launched. It then propagates some distance before something -- like an intrinsic instability in the jet plasma -- triggers a dissipative plasma process. This plasma process expends energy locally in the jet, using it to accelerate particles to highly relativistic energies. The energized particles are what produce the light that we observe.
+        </p>
+    </div>
+    <div class="col">
+        {% include figure.liquid loading="eager" path="assets/img/jet_schematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            The main sequence of events that results in jets being observed.
+        </div>
+    </div>
+</div>
+
+A crucial step in this sequence is the dissipation, particle acceleration and radiation. Also, because black hole jets are often very efficient gamma-ray sources, it may be that some of the emitted photons get absorbed within the jet to produce fresh plasma in the form of electron-positron pairs. In this sense, the dissipation step links together the mysteries of jet composition and radiation: they may go hand-in-hand. These observations beg the question:
+
+<h2>
+What plasma process governs jet energy dissipation?
+</h2>
+
+A lot of my research on black hole jets concerns looking at different potential answers to this question. I have considered two possibilities: magnetic reconnection and magnetized turbulence. Here's what I've done and learned in each case
+
+<h3>
+Scenario 1: Magnetic reconnection
+</h3>
+<div class="row align-items-center">
+    <div class="col-6">
+        <p>
+            <a href="https://en.wikipedia.org/wiki/Magnetic_reconnection">Magnetic reconnection</a> is a basic plasma physics process that is very efficient at liberating magnetic energy. It does this by rearranging the magnetic field threading a plasma from a stressed, high-energy configuration to a more relaxed, lower-energy one (see cartoon). The difference in magnetic energy is given to the plasma. Since jets are thought to contain a lot of magnetic energy, reconnection might be one way that jets dissipate.
+        <br>
+        <br>
+        </p>
+    </div>
+    <div class="col">
+        {% include figure.liquid loading="eager" path="assets/img/reconnection.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            A <a href="https://en.wikipedia.org/wiki/Magnetic_reconnection">Wikipedia cartoon</a> of a reconnection event. A large-scale horizontal magnetic field switches direction across a current sheet (grey X's). The field lines flow inward, reconnecting with each other at the center point, releasing energy. 
+        </div>
+    </div>
+</div>
+
+<div class="row align-items-center">
+    <div class="col-6">
+        <p>
+            The channeling of magnetic energy through reconnection into the motion of relativistic particles and gamma-ray radiation is a bit complicated. This is due to a feedback mechanism sketched here.
+        <br>
+        <br>
+            First the jet is launched. It then propagates some distance before something -- like an intrinsic instability in the jet plasma -- triggers a dissipative plasma process. This plasma process expends energy locally in the jet, using it to accelerate particles to highly relativistic energies. The energized particles are what produce the light that we observe.
+        </p>
+    </div>
+    <div class="col">
+        {% include figure.liquid loading="eager" path="assets/img/knpp_schematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            The main sequence of events that results in jets being observed.
+        </div>
+    </div>
+</div>
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
