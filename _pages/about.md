@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Astrophysicist at <a href='https://physics.wustl.edu/people/john-mehlhaff'>Washington University in St. Louis</a>. 
 

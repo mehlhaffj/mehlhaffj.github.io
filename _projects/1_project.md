@@ -4,7 +4,7 @@ title: black hole accretion disk coronae
 description: how magnetic reconnection powers flaring and throttles jet production
 img: assets/img/kinetic_corona_zoomed.png
 importance: 1
-category: theme
+category: themes
 related_publications: true
 ---
 

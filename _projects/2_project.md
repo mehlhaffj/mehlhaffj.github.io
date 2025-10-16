@@ -4,9 +4,23 @@ title: black hole jets
 description: their energy dissipation, composition, and appearance 
 img: assets/img/cygnusa.jpg
 importance: 2
-category: theme
+category: themes
 giscus_comments: false
 ---
+
+<h2>
+Two outstanding mysteries about black hole jets
+</h2>
+<ol>
+<li>How do they shine?</li>
+<li>What are they made of?</li>
+</ol>
+
+<h2>
+How I think about these questions
+</h2>
+Let me elaborate my theoretical [jet diagram](https://www.markdownguide.org)jet diagram 
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.

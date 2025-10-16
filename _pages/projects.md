@@ -1,18 +1,23 @@
 ---
 layout: page
-title: research themes
+title: Research themes
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: 
 nav: true
 nav_order: 3
-display_categories: [theme]
+display_categories: [themes]
 horizontal: false
 ---
 
-# At a glance
+<div style="width: 100%; text-align: right; margin-bottom: 0;">
+<h2>
+<font color="#E5E5E5">at a glance</font>
+</h2>
+</div>
+<hr style="margin-top: -4px;">
 
 <div class="row align-items-center">
-    <div class="col-7">
+    <div class="col-6">
         <p>When black holes actively feed, they sometimes launch highly collimated, powerful, and rapidly propagating plasma jets into their environments. One famous example of such a jet is the one from the radio galaxy Cygnus A, pictured here.
         <br>
         <br>
@@ -26,18 +31,28 @@ horizontal: false
         </div>
     </div>
 </div>
-<div class="row">
 
-If we were to draw a jetted black hole with several of the main key features that these objects are thought to contain, we might come up with a diagram like the following:
-<div class="row">
+<div class="row align-items-center">
+    <div class="col-6">
+        <p>That last image is an observational point of view. A theoretical picture of a jetted black hole, containing several features that these objects are thought to have, might resemble this sketch.
+        <br>
+        <br>
+            Theoretically, a black hole acts as a kind of engine. Its fuel is the gravitational energy of the plasma falling onto it in the form of an accretion disk. This energy is transformed by the black hole into the energy of the launched jet.
+        <br>
+        <br>
+            The accretion disk is also likely threaded by a magnetic field. This magnetic field is in some cases thought to form a dilute magnetized atmosphere--called a corona--above the disk. </p>
+    </div>
     <div class="col">
-        {% include figure.liquid loading="eager" path="assets/img/jet_schematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/jet_schematic_reduced.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Theoretical cartoon image of a jetted black hole. Only one of the jets, which are launched in opposite directions, is drawn.
+        </div>
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+
+<div class="row justify-content-center">
+<strong>My major research themes focus largely on the physics at different locations in a jetted black hole system: <font color="#980098">jet</font>, <font color="#00B4B4">corona</font>, and <font color="#FFBFBF">disk</font>.</strong>
 </div>
-<div class="row">
 
 <!-- pages/projects.md -->
 <div class="projects">
