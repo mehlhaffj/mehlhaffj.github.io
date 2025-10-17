@@ -4,8 +4,8 @@ title: black hole jets
 description: their energy dissipation, composition, and appearance 
 img: assets/img/cygnusa.jpg
 importance: 2
-category: themes
-giscus_comments: false
+category: by theme
+related_publications: true
 ---
 
 <h2>
@@ -87,7 +87,7 @@ A regime with radiative feedback from pair production
 <h4>
 What I did
 </h4>
-To characterize magnetic reconnection in the presence of this radiative feedback, I first performed an [analytic study](https://ui.adsabs.harvard.edu/abs/2021MNRAS.508.4532M/abstract) where I scoped out the parameter space and laid out a basic framework for understanding the regime. Fully characterizing it, though, required a follow-up [numerical study](https://ui.adsabs.harvard.edu/abs/2024MNRAS.52711587M/abstract). To power this study, I outfitted the <span style="font-family: 'Courier New', Courier, monospace;"><a href="https://ui.adsabs.harvard.edu/abs/2019ascl.soft11012C/abstract">ZELTRON</a></span> particle-in-cell code to self-consistently account for the relevant gamma-ray transport and pair production.
+To characterize magnetic reconnection in the presence of this radiative feedback, I first performed an analytic study {% cite mehlhaff_etal_2021 %} where I scoped out the parameter space and laid out a basic framework for understanding the regime. Fully characterizing it, though, required a follow-up numerical study {% cite mehlhaff_etal_2024 %}. To power this study, I outfitted the <span style="font-family: 'Courier New', Courier, monospace;"><a href="https://ui.adsabs.harvard.edu/abs/2019ascl.soft11012C/abstract">ZELTRON</a></span> particle-in-cell code to self-consistently account for the relevant gamma-ray transport and pair production.
 
 <h4>
 What I found
@@ -101,78 +101,37 @@ Meanwhile, pair production also loads the plasma processed by reconnection with 
 <h3>
 Scenario 2: Magnetized turbulence 
 </h3>
+In addition to the formation and dissipation of large-scale reconnection layers, black hole jets may also become turbulence. Reconnection and turbulence are not necessarily mutually exclusive, since intermittent reconnection layers are often witnessed in magnetized turbulence. However, the resulting current sheets are in any case more random and unpredictable. Magnetized turbulence may also efficiently dissipate jet magnetic field energy.
 
+While the particle acceleration process is somewhat different, the plasma environment is the same. Thus, we expect turbulence to also couple to the same radiative physics and pair production as reconnection would in its place. 
+
+<h4>
+What I did
+</h4>
 <div class="row align-items-center">
-</div>
-
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-0">
+        <p>
+I used the code developed for my previous reconnection work {% cite mehlhaff_etal_2024 %} to perform a novel numerical study of turbulence {% cite mehlhaff_etal_2025a %} coupled to the same radiation mechanisms and pair production. A snapshot from one of the simulations is shown here.
+        </p>
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-0">
+        {% include figure.liquid loading="eager" path="assets/img/knpp_turb.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            The main sequence of events that results in jets being observed.
+        </div>
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+<h4>
+What I found
+</h4>
+Like in the case of reconnection, feedback from pair production dictates the main features of magnetized turbulence. Initially, particle acceleration due to turbulence is much more efficient than radiative cooling, leading to a burst of nonthermally distributed energetic particles and, as a result, gamma-ray radiation and pair production. Subsequently, newborn pairs accumulate and weigh down the plasma, slowing particle acceleration down. By producing its own plasma, turbulence self-regulates until an equilibrium is reached between particle acceleration and radiative cooling. 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Because the final equilibrium is so simple, we were able to analytically predict the number of pairs produced as the plasma approaches its terminal state. This we compared to expected plasma conditions in jets from flat-spectrum radio quasars. For jets in these systems, we found that may substantially increase the pair count <em>in situ</em>.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+We were also able to predict the observable radiation spectrum produced in the final equilibrium state of the turbulence. It is a thermal one with a very predictable characteristic photon energy. However, we are unsure how observable this spectrum would be since, once turbulence subsides, it would fade away. The imprint left on the pair content of the jet would, however, be a permanently imprinted in the downstream plasma.
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+<h2>
+Conclusions
+</h2>
+Whether reconnection or turbulence, dissipation in black hole jets may be intimately linked with their material compositions. These works open up the possibility that gamma-ray signatures may encode information about changes in the pair content of the plasma. There is also hope that we may be able to distinguish the particle acceleration mechanisms: reconnection seems to produce a universal power-law spectrum; turbulence, once equilibrated, produces a thermal spectrum. More work needs to be done to understand the jet structure and the dissipative zones that it naturally produces to situate these models more explicitly in a global context.

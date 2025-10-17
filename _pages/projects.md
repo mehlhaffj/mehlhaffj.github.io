@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Research themes
+title: Research
 permalink: /projects/
 description: 
 nav: true
 nav_order: 3
-display_categories: [themes]
+display_categories: [by theme]
 horizontal: false
 ---
 
