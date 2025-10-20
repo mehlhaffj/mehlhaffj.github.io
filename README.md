@@ -1,3 +1,15 @@
+# My notes on using the al-folio theme
+
+To get the initial website template up and running, I followed the instructions in the [video](https://github.com/alshedivat/al-folio/blob/main/assets/video/tutorial_al_folio.mp4) linked from al-folio's [installation instructions](https://github.com/alshedivat/al-folio/blob/main/INSTALL.md).
+
+To get a local version of the website up and running, I followed the instructions under the heading "Local Setup (Legacy, no longer supported)" under al-folio's [installation instructions](https://github.com/alshedivat/al-folio/blob/main/INSTALL.md).
+
+For this, I found the [linked notes](https://george-gca.github.io/blog/2022/running-local-al-folio/) indispensable. Also relevant were the comments on those notes. As suggested there, I had to revert to an older version of Ruby to get the local website up and running. I also had to install several dependencies: `sudo apt install -y build-essential libssl-dev zlib1g-dev libffi-dev libyaml-dev`.
+
+I also found that the command `bundle exec jekyll serve --lsi` does not refresh the website fast enough when running locally. I instead found myself using the command `bundle exec jekyll serve` (without the `--lsi` option).
+
+---
+
 # al-folio
 
 <div align="center">
