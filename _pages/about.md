@@ -23,7 +23,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a postdoctoral researcher working on several aspects of black hole astrophysics. Black holes don't do much in isolation, but they're often not isolated. Rather, they're immersed in a dynamic, hot, and shining plasma with which they interact. This interaction means that the quest to understand how black holes produce light and influence our Universe requires studying plasmas under extreme conditions -- where strong gravity, gamma-ray radiation, and pair production all matter. 
+I am a scientist working on several aspects of black hole astrophysics. Black holes don't do much in isolation, but they're often not isolated. Rather, they're immersed in a dynamic, hot, and shining plasma with which they interact. This interaction means that the quest to understand how black holes produce light and influence our Universe requires studying plasmas under extreme conditions -- where strong gravity, gamma-ray radiation, and pair production all matter. 
 
 Progress in this area often requires the use of simulations to take into account all of the relevant physics. Thanks to rapidly improving modern supercomputers, these simulations are becoming more and more powerful. And they need to be in order to address the big mysteries pouring in from a rapidly growing network of observatories around the globe and in space. With increasingly sensitive instruments on the one hand, and with ever-more realistic simulations to help us understand observations on the other, now is a very exciting time to be a black hole astrophysicist.
 
